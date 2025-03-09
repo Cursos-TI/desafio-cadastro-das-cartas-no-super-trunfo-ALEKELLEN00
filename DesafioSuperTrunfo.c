@@ -30,8 +30,8 @@ int main (){
     printf("valores informados carta 1:\n");
     
     printf("A população é de %d \n", populacao);
-    printf("A area é de %f\n", area);
-    printf("O pib é de %f\n", pib);
+    printf("A area é de %.2f\n", area);
+    printf("O pib é de %.2f\n", pib);
     printf("Numero de pontos turisticos é de %d\n", numero_pontos_turisticos);
 
     return 0;
