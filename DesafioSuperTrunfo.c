@@ -65,8 +65,10 @@ int main (){
     printf("A area é de %.2f \n", area);
     printf("O pib é de %.2f \n", pib);
     printf("Numero de pontos turisticos é de %d \n", numero_pontos_turisticos);
-
-    //Bloco de printfs que informa os valores da cidade 1
+    printf ("Densidade populacional é de %.2f \n", populacao/area);
+    printf ("Pib per capita é de %.2f \n", pib/populacao);
+    
+    //Bloco de printfs que informa os valores da cidade 2
     printf("\n");
     printf("Valores informados cidade 2:\n");
 
@@ -74,6 +76,8 @@ int main (){
     printf("A area é de %.2f\n", area2);
     printf("O pib é de %.2f\n", pib2);
     printf("Numero de pontos turisticos é de %d\n", numero_pontos_turisticos2);
+    printf ("Densidade populacional é de %.2f \n", populacao2/area2);
+    printf ("Pib per capita é de %.2f \n", pib2/populacao2);
 
 return 0;
 }
