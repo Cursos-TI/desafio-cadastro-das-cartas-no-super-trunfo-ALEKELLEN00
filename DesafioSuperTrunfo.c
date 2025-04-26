@@ -26,12 +26,12 @@ int main (){
     // Onde o usuário informa a população da cidade 1
     printf("Digite a população cidade 1: ");
     // Onde o programa está anexando o valor inserido pelo usuário em sua respectiva variavel
-    scanf("%d", &populacao);
+    scanf("%lu", &populacao);
 
     // Onde o usuário informa a população da cidade 2
     printf("Digite a população cidade 2: ");
     // Onde o programa está anexando o valor inserido pelo usuário em sua respectiva variavel
-    scanf("%d", &populacao2);
+    scanf("%lu", &populacao2);
 
     // Onde o usuário informa a area da cidade 1
     printf("Digite a area da cidade 1: ");
@@ -66,14 +66,14 @@ int main (){
     //Onde esta armazenando os valores de densidade, pib per capita e super poder cidade 1.
     densidade_populacional = populacao/area;
     pib_percapita = pib/populacao;
-    super_poder = 1/densidade_populacional + (populacao + area + pib + numero_pontos_turisticos + pib_percapita + super_poder);
+    super_poder = 1/densidade_populacional + (populacao + area + pib + numero_pontos_turisticos + pib_percapita);
 
 
 
     //Onde esta armazenando os valores de densidade, pib per capita e super poder cidade 2.
     densidade_populacional2 = populacao2/area2;
     pib_percapita2 = pib2/populacao2;
-    super_poder = 1/densidade_populacional2 + (populacao2 + area2 + pib2 + numero_pontos_turisticos2 + pib_percapita2 + super_poder2 );
+    super_poder2 = 1/densidade_populacional2 + (populacao2 + area2 + pib2 + numero_pontos_turisticos2 + pib_percapita2);
     
 
 
@@ -82,7 +82,7 @@ int main (){
     printf("\n");
     printf("Valores informados cidade 1:\n");
 
-    printf("A população é de %d \n", populacao);
+    printf("A população é de %lu \n", populacao);
     printf("A area é de %.2f \n", area);
     printf("O pib é de %.2f \n", pib);
     printf("Numero de pontos turisticos é de %d \n", numero_pontos_turisticos);
@@ -95,16 +95,36 @@ int main (){
     printf("\n");
     printf("Valores informados cidade 2:\n");
 
-    printf("A população é de %d\n", populacao2);
+    printf("A população é de %lu\n", populacao2);
     printf("A area é de %.2f\n", area2);
     printf("O pib é de %.2f\n", pib2);
     printf("Numero de pontos turisticos é de %d\n", numero_pontos_turisticos2);
     printf ("Densidade populacional é de %.2f \n", densidade_populacional2);
     printf ("Pib per capita é de %.2f \n", pib_percapita2);
 
-    //Comparaçao entre as cidades 
+    //Comparaçao entre as cidades
+    printf("\n");
     unsigned long int compPop = populacao > populacao2;
-    printf(compPop);
+    printf("Cidade 1 tem mais população? %lu\n", compPop);
+    
+    float compA = area > area2;
+    printf("Cidade 1 tem área maior? %.0f\n", compA);
+    
+    float comP = pib > pib2;
+    printf("Cidade 1 tem PIB maior? %.0f\n", comP);
+    
+    int comNum = numero_pontos_turisticos > numero_pontos_turisticos2;
+    printf("Cidade 1 tem mais pontos turísticos? %d\n", comNum);
+    
+    float comDen = densidade_populacional > densidade_populacional2;
+    printf("Cidade 1 tem densidade maior? %.0f\n", comDen);
+    
+    float comPip = pib_percapita > pib_percapita2;
+    printf("Cidade 1 tem PIB per capita maior? %.0f\n", comPip);
+    
+    float comSup = super_poder > super_poder2;
+    printf("Cidade 1 tem super poder maior? %.0f\n", comSup);    
+    
 
 return 0;
 }
